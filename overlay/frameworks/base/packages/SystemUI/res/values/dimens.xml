@@ -35,4 +35,8 @@
      screen directly in front of the sensor. -->
     <dimen name="physical_fingerprint_sensor_center_screen_location_y">@dimen/physical_power_button_center_screen_location_y</dimen>
 
+    <!-- Default device corner radius, used for assist UI -->
+    <dimen name="config_rounded_mask_size">30.500004dp</dimen>
+    <dimen name="config_rounded_mask_size_top">@dimen/config_rounded_mask_size</dimen>
+    <dimen name="config_rounded_mask_size_bottom">@dimen/config_rounded_mask_size</dimen>
 </resources>
