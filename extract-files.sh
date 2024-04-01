@@ -8,6 +8,9 @@
 
 function blob_fixup() {
     case "${1}" in
+        vendor/bin/vaultkeeperd|vendor/lib64/libvkservice.so)
+            sed -i 's/ro\.factory\.factory_binary/ro.vendor.factory_binary\x00/g' "${2}"
+            ;;
         vendor/lib64/libexynoscamera3.so)
             xxd -p "${2}" | sed "s/8b022036/1f2003d5/g" | xxd -r -p > "${2}".patched
             mv "${2}".patched "${2}"
